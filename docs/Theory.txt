@@ -1,0 +1,15 @@
+Research for solution.
+
+1) Main idea to idel alhoritm is writing it from scratch.
+
+2) Utilize code from import "text/template/parse" 
+through dynamic wrapping or revriting a code or preprocessig 
+and pre analyse to find appropriate struct to extract.extract
+This method may be quick implementation byt it should be 
+compared to algoritm from scratch.
+
+3) Third mwthod will be more elegant. Idea in learning perseprton 
+to fill fields from one stuct instead of mulltiple will be 
+very possible. Also should be compared by performanse with other methods.
+
+Algorithm namings : Scratch, Parse, Propagation
