@@ -1,4 +1,8 @@
-Research for solution.
+# Research for solution.
+
+If I can found all types of {value} and begin and end of every sentence then I probably have solution.
+Results for types list can be present in filled class fields or with map [string, object].
+Defined fileds with types can be configured with json.
 
 1) Main idea to idel alhoritm is writing it from scratch.
 
@@ -13,3 +17,6 @@ to fill fields from one stuct instead of mulltiple will be
 very possible. Also should be compared by performanse with other methods.
 
 Algorithm namings : Scratch, Parse, Propagation
+
+# # Scratch
+
