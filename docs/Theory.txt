@@ -20,3 +20,8 @@ Algorithm namings : Scratch, Parse, Propagation
 
 # # Scratch
 
+
+Scheduler API defines the interfaces for your request routing and request/reply handlers.
+Scheduler Core for manages the lifecycle (loading, starting, and stopping) of your service and defines a powerful module system for adding functionality.functionality.
+Scheduler HTTP SERVICE It incorporates both Scheduler-api and Scheduler-core.
+
