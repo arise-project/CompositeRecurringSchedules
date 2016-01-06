@@ -25,3 +25,11 @@ Scheduler API defines the interfaces for your request routing and request/reply 
 Scheduler Core for manages the lifecycle (loading, starting, and stopping) of your service and defines a powerful module system for adding functionality.functionality.
 Scheduler HTTP SERVICE It incorporates both Scheduler-api and Scheduler-core.
 
+recurence filed :  one time|every
+numeric filed : {#} - used in context
+time span filed : seconds|minutes|hours|days|weeks|months|years|date|weekday|weekend|days of week
+date filed : date format
+time filed : time format
+action filed : ... would be good if you could save that as a 'schedule' object and then make rules that stack.. like
+
+
