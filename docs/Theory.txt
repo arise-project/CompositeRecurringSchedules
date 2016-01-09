@@ -1,8 +1,12 @@
 # Research for solution.
 
+# # Requirements
+
 If I can found all types of {value} and begin and end of every sentence then I probably have solution.
 Results for types list can be present in filled class fields or with map [string, object].
 Defined fileds with types can be configured with json.
+
+# # # Fowler recomendations
 
 1) Main idea to idel alhoritm is writing it from scratch.
 
@@ -20,10 +24,17 @@ Algorithm namings : Scratch, Parse, Propagation
 
 # # Scratch
 
+# # Parse
+
+# # Propagation
+
+#Architecture
 
 Scheduler API defines the interfaces for your request routing and request/reply handlers.
 Scheduler Core for manages the lifecycle (loading, starting, and stopping) of your service and defines a powerful module system for adding functionality.functionality.
 Scheduler HTTP SERVICE It incorporates both Scheduler-api and Scheduler-core.
+
+#Fileds
 
 recurence filed :  one time|every
 numeric filed : {#} - used in context
