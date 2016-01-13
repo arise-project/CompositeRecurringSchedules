@@ -10,11 +10,22 @@ func main() {
     fmt.Println("Example : ")
     fmt.Printf("%v\n\n",str)
     fmt.Println("Initial parsing : ")
-    var words = strings.SplitAfterN(str, "}", strings.Count(str,"{"))
+    var wordsCount = FieldsCount(str)
+    var words = strings.SplitAfterN(str, "}", wordsCount)
     fmt.Printf("%q\n", words)
     
-    
     fmt.Println("Correction : ")
+    
+    var scriptsCount = CorrectScriptPart(words)
+    
+    fmt.Printf("%q\n Corrected count %v\n", words, scriptsCount)
+    
+}
+
+
+
+func CorrectScriptPart(words []string) int {
+    var scriptsCount = 0;
     for index,element := range words {
         // index is the index where we are
         // element is the element from someSlice for where we are
@@ -22,14 +33,22 @@ func main() {
             if strings.Index(element, "{") > 1 {
                 words[index - 1] = words[index - 1] +  element[0:strings.Index(element, "{") - 1]
                 words[index] = element[strings.Index(element, "{"):len(element)]
+                scriptsCount = scriptsCount + 1
             }
         }
     }
-    fmt.Printf("%q\n", words)
     
+    return scriptsCount
 }
 
 
+
+func Validate(str string) bool {
+    return true
+}
+
+
+
 func FieldsCount(str string) int {
-    return 0
+    return  strings.Count(str,"{")
 }
