@@ -3,7 +3,16 @@ package main
 import (
     "fmt"
     "strings"
+    "encoding/json"
 )
+
+type WordConfiguration struct {
+		TypeName string
+		Values []string
+		Script bool
+	}
+
+
 
 func main() {
     var str = "{every} {1} {dec 25} {starting dec 25 2016} {do nothing} = $christmas {every} {2} {weeks} {starting jan 1 2016} {send email to list} EXCEPT {$Christmas} = biweeklynewsletter"
@@ -20,6 +29,7 @@ func main() {
     
     fmt.Printf("%q\n Corrected count %v\n", words, scriptsCount)
     
+    Configuration()
 }
 
 
@@ -51,4 +61,21 @@ func Validate(str string) bool {
 
 func FieldsCount(str string) int {
     return  strings.Count(str,"{")
+}
+
+
+func Configuration() {
+    var jsonBlob = []byte(`[
+		{"TypeName": "Platypus", "Values": ["Crimson","Red","Ruby","Maroon"], "Script": true},
+		{"TypeName": "Quoll", "Values": ["Crimson","Red"], "Script": false}
+	]`)
+	
+	var configs []WordConfiguration
+	err := json.Unmarshal(jsonBlob, &configs)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	fmt.Println("\nConfiguration:")
+	fmt.Printf("%+v\n", configs)
+
 }
