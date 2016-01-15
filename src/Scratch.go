@@ -4,6 +4,7 @@ import (
     "fmt"
     "strings"
     "encoding/json"
+    "time"
 )
 
 type WordConfiguration struct {
@@ -79,3 +80,20 @@ func Configuration() {
 	fmt.Printf("%+v\n", configs)
 
 }
+
+
+//begin schedule 
+func IsOccuring(event string, aDate time.Time) bool{
+	return false
+}
+		
+func Dates(event string, fromDate time.Time, toDate time.Time) [] time.Time {
+	return nil
+}
+		
+		
+func NextOccurance(event string, aDate time.Time) time.Time{
+	return time.Now()
+}
+
+//end schedule 
