@@ -7,10 +7,40 @@ import (
     "time"
 )
 
+
+
 type WordConfiguration struct {
 		TypeName string
 		Values []string
 		Script bool
+	}
+
+
+
+const(
+    every = 1
+    once = 2
+)
+
+
+
+const(
+    year = 1
+    month = 2
+    week = 3
+    day = 4
+)
+	
+	
+type ScheduleElement struct {
+		SeriesType int // every|once
+		SeriesNumber int // 1, 2...
+		SeriesDate time.Time() // dec 25
+		SeriesPeriod int // week|day..
+		fromDate time.Time() // starting dec 25 2016
+		toDate time.Time() // ending dec 25 2017
+		ExpressionName string //do nothing
+		ExpressionText string //$Christmas
 	}
 
 
@@ -65,6 +95,7 @@ func FieldsCount(str string) int {
 }
 
 
+
 func Configuration() {
     var jsonBlob = []byte(`[
 		{"TypeName": "Platypus", "Values": ["Crimson","Red","Ruby","Maroon"], "Script": true},
@@ -82,14 +113,18 @@ func Configuration() {
 }
 
 
+
 //begin schedule 
 func IsOccuring(event string, aDate time.Time) bool{
 	return false
 }
+
+
 		
 func Dates(event string, fromDate time.Time, toDate time.Time) [] time.Time {
 	return nil
 }
+		
 		
 		
 func NextOccurance(event string, aDate time.Time) time.Time{
