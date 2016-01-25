@@ -5,6 +5,7 @@ import (
     "strings"
     "encoding/json"
     "time"
+    "text/template" //TODO!
 )
 
 
@@ -30,6 +31,7 @@ const(
     week = 3
     day = 4
 )
+
 	
 	
 type ScheduleElement struct {
@@ -41,7 +43,7 @@ type ScheduleElement struct {
 		toDate time.Time() // ending dec 25 2017
 		ExpressionName string //do nothing
 		ExpressionText string //$Christmas
-	}
+}
 
 
 

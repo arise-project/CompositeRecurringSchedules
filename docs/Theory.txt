@@ -43,4 +43,21 @@ date filed : date format
 time filed : time format
 action filed : ... would be good if you could save that as a 'schedule' object and then make rules that stack.. like
 
+Templates
 
+In the text/template package, there are two significant new features to make writing templates easier.
+
+First, it is now possible to trim spaces around template actions, which can make template definitions more readable. A minus sign at the beginning of an action says to trim space before the action, and a minus sign at the end of an action says to trim space after the action. For example, the template
+
+{{23 -}}
+   <
+{{- 45}}
+formats as 23<45.
+
+Second, the new {{block}} action, combined with allowing redefinition of named templates, provides a simple way to define pieces of a template that can be replaced in different instantiations. For example, the template
+
+<title>{{block "title"}}Page Title{{end}}</title>
+<body>
+<h1>{{template "title"}}</h1>
+{{block "page"}}Main text{{end}}
+defines the basic formatting of a web page. A program can then overlay that template with new definitions for the "title" and "page" blocks to reuse the formatting for another page.
